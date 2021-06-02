@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Marginer } from "../../components/marginer";
 import { SeoInfoSection } from "../seoInfoSection";
+import { FooterSection } from "./FooterSection";
 import { TopSection } from "./topSection";
 
 const PageContainer = styled.div`
@@ -15,6 +17,8 @@ export function HomePage(props) {
     <PageContainer>
       <TopSection />
       <SeoInfoSection />
+      <Marginer direction="vertical" margin="8em" />
+      <FooterSection />
     </PageContainer>
   );
 }
