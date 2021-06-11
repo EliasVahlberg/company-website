@@ -1,7 +1,17 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 import { Logo } from "../logo";
 import { Marginer } from "../marginer";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+const TopFooterRadius = styled.div`
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+  background: #161616;
+`;
 const FooterContainer = styled.div`
   width: 100%;
   height: 500px;
@@ -9,6 +19,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   background: #161616;
   align-items: center;
+  position: relative;
 `;
 const BigFatText = styled.h1`
   font-size: 30px;
@@ -25,9 +36,9 @@ let SmallBoldText = styled.p`
   line-height: 11px;
   color: white;
   margin-right: ${(props) =>
-    props.isReversed ? 0 : props.margin ? props.margin : "5px"};
+    props.isReversed ? 0 : props.margin ? props.margin : "10px"};
   margin-left: ${(props) =>
-    props.isReversed ? (props.margin ? props.margin : "5px") : 0};
+    props.isReversed ? (props.margin ? props.margin : "10px") : 0};
 `;
 const BottomBox = styled.div`
   width: 80%;
@@ -54,27 +65,83 @@ const LeftContainer = styled.div`
 const RightContainer = styled.div`
   display: flex;
 `;
+const SocialIcon = styled.div`
+  color: #fff;
+  font-size: 20px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  &:not(:last-of-type) {
+    margin-right: 11px;
+    @media screen and (max-width: 480px) {
+      font-size: 9px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+  &:hover {
+    color: #adadad;
+  }
+`;
+const Link = styled.a`
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  &:not(::last-of-type) {
+    margin-right: 11px;
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
+  }
+  &:hover {
+    color: #adadad;
+  }
+`;
+const RightsRes = styled.div`
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 12px;
+`;
 export function Footer(props) {
   return (
-    <FooterContainer>
-      <Marginer direction="vertical" margin="4em" />
-      <Logo medium />
-      <Marginer direction="vertical" margin="2em" />
-      <BigFatText>
-        Vi ser till att ni kan fokusera på det ni är bra på.
-      </BigFatText>
-      <Marginer direction="vertical" margin="1em" />
-      <BottomBox>
-        <HLine />
-        <RLC>
-          <LeftContainer>
-            <SmallBoldText isReversed={false}>Privacy Policy</SmallBoldText>
-          </LeftContainer>
-          <RightContainer>
-            <SmallBoldText isReversed={true}>Privacy Policy</SmallBoldText>
-          </RightContainer>
-        </RLC>
-      </BottomBox>
-    </FooterContainer>
+    <div>
+      <TopFooterRadius />
+      <FooterContainer>
+        <Marginer direction="vertical" margin="4em" />
+        <Logo medium />
+        <Marginer direction="vertical" margin="2em" />
+        <BigFatText>
+          Vi ser till att ni kan fokusera på det ni är bra på.
+        </BigFatText>
+        <Marginer direction="vertical" margin="1em" />
+        <BottomBox>
+          <HLine />
+          <RLC>
+            <LeftContainer>
+              <SmallBoldText isReversed={false}>
+                <Link>Privacy Policy</Link>
+              </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link>GDPR</Link>
+              </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link>Kontakta oss</Link>
+              </SmallBoldText>
+            </LeftContainer>
+            <RightContainer>
+              <SocialIcon>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </SocialIcon>
+            </RightContainer>
+          </RLC>
+        </BottomBox>
+        <RightsRes>
+          &copy; 2021 Dioptima handelsbolag All rights reserved.
+        </RightsRes>
+      </FooterContainer>
+    </div>
   );
 }
