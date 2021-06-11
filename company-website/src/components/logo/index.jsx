@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import CompLogo from "../../assets/textures/croppedLogo.png";
+import CompLogo from "../../assets/textures/Logo4.svg";
 import { theme } from "../../theme";
 
 const LogoContainer = styled.div`
@@ -10,21 +10,21 @@ const LogoContainer = styled.div`
 `;
 
 const LogoImg = styled.img`
-  width: 8em;
-  height: 8em;
+  width: 10em;
+  height: 10em;
   align-self: center;
   ${({ inline }) =>
     inline &&
     css`
-      width: 35px;
-      height: 35px;
+      width: 45px;
+      height: 45px;
       margin-right: 5px;
     `};
   ${({ medium }) =>
     medium &&
     css`
-      width: 5em;
-      height: 5em;
+      width: 7em;
+      height: 7em;
       margin-right: 5px;
     `};
 `;
