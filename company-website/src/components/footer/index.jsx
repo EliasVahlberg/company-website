@@ -39,6 +39,9 @@ let SmallBoldText = styled.p`
     props.isReversed ? 0 : props.margin ? props.margin : "10px"};
   margin-left: ${(props) =>
     props.isReversed ? (props.margin ? props.margin : "10px") : 0};
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 const BottomBox = styled.div`
   width: 80%;
