@@ -34,6 +34,7 @@ const TopText = styled.h1`
   line-height: 1.4;
   color: white;
   margin: 0;
+  text-align: center;
 `;
 //Absolute position ref
 const ArrowContainer = styled.div`

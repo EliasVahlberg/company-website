@@ -141,6 +141,7 @@ export function Footer(props) {
             </RightContainer>
           </RLC>
         </BottomBox>
+        <Marginer direction="vertical" margin="2em" />
         <RightsRes>
           &copy; 2021 Dioptima handelsbolag All rights reserved.
         </RightsRes>
