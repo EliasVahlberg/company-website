@@ -35,6 +35,7 @@ const SegmentTitle = styled.h2`
   font-size: 28px;
   font-weight: 700;
   margin: 5px 0;
+  text-align: center;
   @media screen and (max-width: 1230px) {
     margin-top: 1.5em;
   }

@@ -14,6 +14,9 @@ const TopContainer = styled.div`
   padding: 0;
   background-image: url(${BackgroundImg});
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 `;
 
 const BackgroundFilter = styled.div`
