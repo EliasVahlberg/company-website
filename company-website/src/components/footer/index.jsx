@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Logo } from "../logo";
 import { Marginer } from "../marginer";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 const TopFooterRadius = styled.div`
   height: 60px;
   width: 100%;
@@ -30,7 +31,7 @@ const BigFatText = styled.h1`
   max-width: 400px;
   text-align: center;
 `;
-let SmallBoldText = styled.p`
+const SmallBoldText = styled.p`
   font-weight: 500;
   font-size: 14px;
   line-height: 11px;
@@ -86,10 +87,12 @@ const SocialIcon = styled.div`
     color: #adadad;
   }
 `;
-const Link = styled.a`
+
+const LinkText = styled.p`
   color: #fff;
   transition: all 200ms ease-in-out;
   cursor: pointer;
+  margin-top: -0.5em;
   &:not(::last-of-type) {
     margin-right: 11px;
     @media screen and (max-width: 480px) {
@@ -125,13 +128,14 @@ export function Footer(props) {
           <RLC>
             <LeftContainer>
               <SmallBoldText isReversed={false}>
-                <Link>Privacy Policy</Link>
+                <Link to="/gdpr" style={{ textDecoration: "none" }}>
+                  <LinkText>GDPR</LinkText>
+                </Link>
               </SmallBoldText>
               <SmallBoldText isReversed={false}>
-                <Link>GDPR</Link>
-              </SmallBoldText>
-              <SmallBoldText isReversed={false}>
-                <Link>Kontakta oss</Link>
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <LinkText>Kontakta oss</LinkText>
+                </Link>
               </SmallBoldText>
             </LeftContainer>
             <RightContainer>

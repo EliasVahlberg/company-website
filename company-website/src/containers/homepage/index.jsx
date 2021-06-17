@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
-import { SeoInfoSection } from "../seoInfoSection";
+import { SeoInfoSection } from "./seoInfoSection";
 import { FooterSection } from "./FooterSection";
 import { TopSection } from "./topSection";
 

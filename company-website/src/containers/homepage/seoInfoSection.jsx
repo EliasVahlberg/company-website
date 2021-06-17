@@ -1,14 +1,14 @@
 import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
-import { InfoSegment } from "../components/infoSegment";
-import { SectionTitle } from "../components/sectionTitle";
-import InfoImg1 from "../assets/textures/SEOInfoB1.svg";
-import InfoImg2 from "../assets/textures/SEOInfoB2.svg";
-import InfoImg3 from "../assets/textures/SEOInfoB3.svg";
-import InfoImg4 from "../assets/textures/SEOInfoB4.svg";
-import InfoImgL from "../assets/textures/SEOInfoLocal.svg";
-import { Marginer } from "../components/marginer";
+import { InfoSegment } from "../../components/infoSegment";
+import { SectionTitle } from "../../components/sectionTitle";
+import InfoImg1 from "../../assets/textures/SEOInfoB1.svg";
+import InfoImg2 from "../../assets/textures/SEOInfoB2.svg";
+import InfoImg3 from "../../assets/textures/SEOInfoB3.svg";
+import InfoImg4 from "../../assets/textures/SEOInfoB4.svg";
+import InfoImgL from "../../assets/textures/SEOInfoLocal.svg";
+import { Marginer } from "../../components/marginer";
 
 const InfoContainer = styled(Element)`
   width: 100%;

@@ -13,6 +13,7 @@ const ButtonWraper = styled.button`
   border: 2px solid transparent;
   transition: all 250ms ease-in-out;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
     background: transparent;
     border: 2px solid ${theme.primary_darker};

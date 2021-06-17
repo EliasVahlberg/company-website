@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import { HomePage } from "./containers/homepage";
+import { WebPages } from "./webpages";
 
 function App(props) {
-  return <HomePage />;
+  return <WebPages />;
 }
 export default App;

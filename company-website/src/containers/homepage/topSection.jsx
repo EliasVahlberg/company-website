@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
-import BackgroundImg from "../../assets/textures/topSecBg.jpg";
+import BackgroundImg from "../../assets/textures/topSecBg_Opt.jpg";
 import { Logo } from "../../components/logo";
 import { Button } from "../../components/button";
 import { DownArrow } from "../../components/downArrow";
 import { NavBar } from "../../components/navbar";
 import { Element, scroller } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const TopContainer = styled.div`
   width: 100%;
@@ -60,7 +61,9 @@ export function TopSection(props) {
 
           <TopText>Teknisk rådgivning och service</TopText>
           <Marginer direction="vertical" margin="2em" />
-          <Button>Hitta tjänster</Button>
+          <Link to="/services">
+            <Button>Hitta tjänster</Button>
+          </Link>
           <ArrowContainer onClick={scrollToNextSec}>
             <DownArrow></DownArrow>
           </ArrowContainer>
