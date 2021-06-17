@@ -46,9 +46,6 @@ const TopText = styled.h1`
 `;
 
 
-
-
-//    ANIMATION
 const SmallText = styled.p`
   font-size: inherit;
   line-height: 1.4;

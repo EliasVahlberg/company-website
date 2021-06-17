@@ -27,12 +27,39 @@ const TopText = styled.h1`
   text-align: center;
 `;
 
+const MiddlePart = styled.div`
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+const SmallText = styled.p`
+  font-size: inherit;
+  line-height: 1.4;
+  color: ${theme.kinda_dark};
+  text-align: center;
+  margin: 0;
+`;
+
+
+
+
+
 //<Marginer direction="vertical" margin="100em" />
 export function ContactPage(props) {
   return (
     <PageContainer>
       <AltNavBar />
       <TopText>Kontakta oss</TopText>
+      
+      <MiddlePart>
+        <SmallText>
+          
+        </SmallText>
+      </MiddlePart>
+
       <BottomPart>
         <Footer />
       </BottomPart>

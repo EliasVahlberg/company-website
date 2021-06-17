@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
-import { Marginer } from "../marginer";
+import { Marginer } from "../../components/marginer";
 const DownArrowContainer = styled.div`
   width: 45px;
   height: 45px;
