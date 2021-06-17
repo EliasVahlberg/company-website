@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+//import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";    Not using Switch and Link?
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from "./home";
 import CompInfo from "./compInfo";
 import SeoInfo from "./seoInfo";

@@ -3,8 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import { Logo } from "../logo";
 import { Marginer } from "../marginer";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 const TopFooterRadius = styled.div`
   height: 60px;
   width: 100%;
@@ -31,6 +32,8 @@ const BigFatText = styled.h1`
   max-width: 400px;
   text-align: center;
 `;
+
+
 const SmallBoldText = styled.p`
   font-weight: 500;
   font-size: 14px;
