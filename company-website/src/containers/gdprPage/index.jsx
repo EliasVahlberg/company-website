@@ -4,9 +4,9 @@ import { Footer } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
 import { InfoSegment } from "../../components/infoSegment";
-
 import { Marginer } from "../../components/marginer";
 
+//Images import
 import GDPRIMG1 from "../../assets/textures/DataArrangingFlatline.svg";
 import GDPRIMG2 from "../../assets/textures/SecurityTwoColor.svg";
 
@@ -17,6 +17,7 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
+
 const BottomPart = styled.div`
   width: 100%;
   position: absolute;
@@ -24,6 +25,7 @@ const BottomPart = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 
 const MiddlePart = styled.div`
   width: 100%;
@@ -157,8 +159,6 @@ export function GDPRPage(props) {
     */
     }
     </div>
-      
-
     </PageContainer>
   );
 }
