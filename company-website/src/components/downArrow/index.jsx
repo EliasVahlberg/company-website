@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
+import { Marginer } from "../marginer";
 const DownArrowContainer = styled.div`
   width: 45px;
   height: 45px;
@@ -13,6 +14,7 @@ const DownArrowContainer = styled.div`
   align-items: center;
   transition: 150ms ease-in;
   border: 2px solid transparent;
+  //margin: 2em;
   &:hover {
     background: transparent;
     border: 2px solid ${theme.primary_darker};
