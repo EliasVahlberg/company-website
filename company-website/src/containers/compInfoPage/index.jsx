@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Marginer } from "../../components/marginer";
 import { AltNavBar } from "../../components/navbar";
 import BackgroundImg from "../../assets/textures/Web_BG2_Opt.jpg";
 import { Footer } from "../../components/footer";
