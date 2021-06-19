@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Footer } from "../../components/footer";
+import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
+import ContactFormStyled from "../../components/contactFormStyled";
 
 const PageContainer = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ const PageContainer = styled.div`
 
 const BottomPart = styled.div`
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@ const TopText = styled.h1`
 const MiddlePart = styled.div`
   width: 100%;
   position: relative;
+  align-items: center;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -43,25 +45,19 @@ const SmallText = styled.p`
   margin: 0;
 `;
 
-
-
-
-
 //<Marginer direction="vertical" margin="100em" />
 export function ContactPage(props) {
   return (
     <PageContainer>
       <AltNavBar />
       <TopText>Kontakta oss</TopText>
-      
+
       <MiddlePart>
-        <SmallText>
-          
-        </SmallText>
+        <ContactFormStyled></ContactFormStyled>
       </MiddlePart>
 
       <BottomPart>
-        <Footer />
+        <SmallFooter />
       </BottomPart>
     </PageContainer>
   );
