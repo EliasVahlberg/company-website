@@ -6,22 +6,20 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { theme } from "../../theme";
 const ContactInfoWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: right;
   width: 35%;
-  height: 100vh;
-  padding: 0 0px;
   border-radius: 10px;
+  height: 100%;
 `;
+//${({ panelHeight }) =>
+//panelHeight ? `${panelHeight}px` : "80%"};
 const ContactInfoWrapperInner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
   width: 100%;
-  height: ${({ panelHeight }) => (panelHeight ? `${panelHeight}px` : "70%")};
-
+  height: 70%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 20px 0px rgba(17, 15, 90, 0.2);

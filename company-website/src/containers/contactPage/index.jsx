@@ -41,14 +41,12 @@ const MiddlePart = styled.div`
   justify-content: center;
   bottom: 0;
   display: flex;
-  flex-direction: column;
 `;
 const InnerMiddlePart = styled.div`
   width: 80%;
-  height: 100%;
   bottom: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 `;
@@ -69,10 +67,7 @@ export function ContactPage(props) {
       <TopText>Kontakta oss</TopText>
 
       <MiddlePart>
-        <InnerMiddlePart>
-          <ContactInfoPanel></ContactInfoPanel>
-          <ContactFormStyled id="ContactFormStyled1"></ContactFormStyled>
-        </InnerMiddlePart>
+        <ContactFormStyled id="ContactFormStyled1" />
       </MiddlePart>
 
       <BottomPart>

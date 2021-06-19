@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import styled, { css } from "styled-components";
 import { theme } from "../../theme";
+import ContactInfoPanel from "../contactInfoPanel";
+const OuterWrapper = styled.div`
+  width: 80%;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 const StyledFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,6 +21,8 @@ const StyledFormWrapper = styled.div`
   width: 55%;
   height: 100vh;
   padding: 0 0 0 0;
+  resize: none;
+  flex-flow: column nowrap;
 `;
 const sharedStyles = css`
   background-color: #eee;
@@ -19,6 +32,7 @@ const sharedStyles = css`
   margin: 10px 0 20px 0;
   padding: 20px;
   box-sizing: border-box;
+  resize: none;
 `;
 const StyledForm = styled.form`
   width: 100%;
@@ -26,14 +40,15 @@ const StyledForm = styled.form`
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
-  height: 70%;
-  //box-sizing: border-box;
+  //height: 80%;
+  box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 `;
 const StyledTextArea = styled.textarea`
   background-color: #eee;
   width: 100%;
   min-height: 100px;
+  max-height: 200px;
   resize: none;
   ${sharedStyles}
 `;
@@ -132,59 +147,65 @@ export default function ContactFormStyled() {
       );
     e.target.reset();
   }
-
   return (
-    <StyledFormWrapper>
-      <StyledForm onSubmit={handleSubmit} id="contact-form">
-        <h2>Kontakta oss via mail</h2>
-        <label htmlFor="Företag">Företag</label>
+    <OuterWrapper>
+      <ContactInfoPanel></ContactInfoPanel>
+      <StyledFormWrapper>
+        <StyledForm onSubmit={handleSubmit} id="contact-form">
+          <h2>Kontakta oss via mail</h2>
+          <label htmlFor="Företag">Företag</label>
 
-        <StyledInput
-          type="text"
-          name="company"
-          value={state.company}
-          onChange={handleInput}
-        />
+          <StyledInput
+            type="text"
+            name="company"
+            value={state.company}
+            onChange={handleInput}
+          />
 
-        <label htmlFor="name">Namn på Kontaktperson</label>
-        <StyledInput
-          type="text"
-          name="name"
-          value={state.name}
-          onChange={handleInput}
-        />
-        <label htmlFor="email">Email</label>
-        <StyledInput
-          type="email"
-          name="email"
-          value={state.email}
-          onChange={handleInput}
-        />
-        <label htmlFor="tel">Tel.nr</label>
+          <label htmlFor="name">Namn på Kontaktperson</label>
+          <StyledInput
+            type="text"
+            name="name"
+            value={state.name}
+            onChange={handleInput}
+          />
+          <label htmlFor="email">Email</label>
+          <StyledInput
+            type="email"
+            name="email"
+            value={state.email}
+            onChange={handleInput}
+          />
+          <label htmlFor="tel">Tel.nr</label>
 
-        <StyledInput
-          type="text"
-          name="tel"
-          value={state.tel}
-          onChange={handleInput}
-        />
-        <label htmlFor="service">Typ av tjänst</label>
+          <StyledInput
+            type="text"
+            name="tel"
+            value={state.tel}
+            onChange={handleInput}
+          />
+          <label htmlFor="service">Typ av tjänst</label>
 
-        <StyledInput
-          type="text"
-          name="service"
-          value={state.service}
-          onChange={handleInput}
-        />
-        <label htmlFor="note">Övrig information/frågor</label>
-        <StyledTextArea name="note" value={state.note} onChange={handleInput} />
-        {error && (
-          <StyledError>
-            <p>{error}</p>
-          </StyledError>
-        )}
-        <StyledButton type="submit">Skicka</StyledButton>
-      </StyledForm>
-    </StyledFormWrapper>
+          <StyledInput
+            type="text"
+            name="service"
+            value={state.service}
+            onChange={handleInput}
+          />
+          <label htmlFor="note">Övrig information/frågor</label>
+          <StyledTextArea
+            name="note"
+            value={state.note}
+            onChange={handleInput}
+          />
+          {error && (
+            <StyledError>
+              <p>{error}</p>
+            </StyledError>
+          )}
+          <StyledButton type="submit">Skicka</StyledButton>
+        </StyledForm>
+      </StyledFormWrapper>
+    </OuterWrapper>
   );
 }
