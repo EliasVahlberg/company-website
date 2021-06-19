@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Footer } from "../../components/footer";
+import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
 
@@ -32,7 +32,7 @@ export function ServicesPage(props) {
       <AltNavBar />
       <TopText>Våra tjänster</TopText>
       <BottomPart>
-        <Footer />
+        <SmallFooter />
       </BottomPart>
     </PageContainer>
   );

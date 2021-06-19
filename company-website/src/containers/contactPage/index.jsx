@@ -4,12 +4,18 @@ import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
 import ContactFormStyled from "../../components/contactFormStyled";
+import ContactInfoPanel from "../../components/contactInfoPanel";
+import BackgroundImg from "../../assets/textures/Web_BG2_Opt.jpg";
 
 const PageContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-image: url(${BackgroundImg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 `;
 
 const BottomPart = styled.div`
@@ -32,9 +38,19 @@ const MiddlePart = styled.div`
   width: 100%;
   position: relative;
   align-items: center;
+  justify-content: center;
   bottom: 0;
   display: flex;
   flex-direction: column;
+`;
+const InnerMiddlePart = styled.div`
+  width: 80%;
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const SmallText = styled.p`
@@ -53,7 +69,10 @@ export function ContactPage(props) {
       <TopText>Kontakta oss</TopText>
 
       <MiddlePart>
-        <ContactFormStyled></ContactFormStyled>
+        <InnerMiddlePart>
+          <ContactInfoPanel></ContactInfoPanel>
+          <ContactFormStyled id="ContactFormStyled1"></ContactFormStyled>
+        </InnerMiddlePart>
       </MiddlePart>
 
       <BottomPart>

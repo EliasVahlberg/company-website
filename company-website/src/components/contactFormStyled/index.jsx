@@ -6,10 +6,10 @@ const StyledFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 70%;
+  align-items: left;
+  width: 55%;
   height: 100vh;
-  padding: 0 20px;
+  padding: 0 0 0 0;
 `;
 const sharedStyles = css`
   background-color: #eee;
@@ -22,11 +22,12 @@ const sharedStyles = css`
 `;
 const StyledForm = styled.form`
   width: 100%;
-  max-width: 700px;
+  //max-width: 700px;
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
-  box-sizing: border-box;
+  height: 70%;
+  //box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 `;
 const StyledTextArea = styled.textarea`

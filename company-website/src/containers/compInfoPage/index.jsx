@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { AltNavBar } from "../../components/navbar";
 import BackgroundImg from "../../assets/textures/Web_BG2_Opt.jpg";
-import { Footer } from "../../components/footer";
+import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 
 const PageContainer = styled.div`
@@ -46,7 +46,7 @@ export function CompInfoPage(props) {
         <AltNavBar />
         <TopText>Om oss</TopText>
         <BottomPart>
-          <Footer />
+          <SmallFooter />
         </BottomPart>
       </BGContainer>
     </PageContainer>
