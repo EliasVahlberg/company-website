@@ -113,7 +113,7 @@ export default function ContactFormStyled() {
     // console.log(test);
 
     //Does work
-    //sendEmail(e);
+    sendEmail(e);
     console.log("Form Succeeded and sent");
     for (let key in state) {
       setState((prev) => ({ ...prev, [key]: "" }));
