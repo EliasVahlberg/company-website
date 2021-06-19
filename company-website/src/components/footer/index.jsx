@@ -23,6 +23,15 @@ const FooterContainer = styled.div`
   align-items: center;
   position: relative;
 `;
+const SmallFooterContainer = styled.div`
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #161616;
+  align-items: center;
+  position: relative;
+`;
 const BigFatText = styled.h1`
   font-size: 30px;
   font-weight: bold;
@@ -32,7 +41,6 @@ const BigFatText = styled.h1`
   max-width: 400px;
   text-align: center;
 `;
-
 
 const SmallBoldText = styled.p`
   font-weight: 500;
@@ -153,6 +161,43 @@ export function Footer(props) {
           &copy; 2021 Dioptima handelsbolag All rights reserved.
         </RightsRes>
       </FooterContainer>
+    </div>
+  );
+}
+export function SmallFooter(props) {
+  return (
+    <div>
+      <SmallFooterContainer>
+        <Marginer direction="vertical" margin="4em" />
+        <Logo medium />
+        <Marginer direction="vertical" margin="1em" />
+        <BottomBox>
+          <HLine />
+          <RLC>
+            <LeftContainer>
+              <SmallBoldText isReversed={false}>
+                <Link to="/gdpr" style={{ textDecoration: "none" }}>
+                  <LinkText>GDPR</LinkText>
+                </Link>
+              </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <LinkText>Kontakta oss</LinkText>
+                </Link>
+              </SmallBoldText>
+            </LeftContainer>
+            <RightContainer>
+              <SocialIcon>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </SocialIcon>
+            </RightContainer>
+          </RLC>
+        </BottomBox>
+        <Marginer direction="vertical" margin="2em" />
+        <RightsRes>
+          &copy; 2021 Dioptima handelsbolag All rights reserved.
+        </RightsRes>
+      </SmallFooterContainer>
     </div>
   );
 }

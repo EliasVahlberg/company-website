@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Footer } from "../../components/footer";
+import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
-import { InfoSegment } from "../../components/infoSegment";
 import { Marginer } from "../../components/marginer";
 
 //Images import
@@ -16,8 +15,17 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+const SectionContainer = styled.div`
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 
-
+  background: ${(props) =>
+    props.NoBg ? "rgba(0,0,0,0)" : props.BgColor || "rgba(49, 49, 49, 0.1)"};
+  @media screen and (max-width: 720px) {
+    width: 90%;
+  }
+`;
 const BottomPart = styled.div`
   width: 100%;
   position: absolute;
@@ -26,13 +34,13 @@ const BottomPart = styled.div`
   flex-direction: column;
 `;
 
-
 const MiddlePart = styled.div`
   width: 100%;
   position: relative;
   bottom: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const TopText = styled.h1`
@@ -45,21 +53,14 @@ const TopText = styled.h1`
   margin-bottom: 50px;
 `;
 
-
 const SmallText = styled.p`
-  font-size: inherit;
+  font-size: 17px;
   line-height: 1.4;
   color: ${theme.kinda_dark};
-  text-align: center;
   margin: 0;
-  //#movingDiv {
-  //animation: move 3s infinite;
-  //}
-  //@keyframes move {
-  //50% {margin-bottom: 50px;}
-  //}
 `;
 
+//LOOK AT THIS DUDE
 const AnimatedText = styled.p`
   font-size: inherit;
   line-height: 1.4;
@@ -67,10 +68,12 @@ const AnimatedText = styled.p`
   text-align: center;
   margin: 0;
   #movingDiv {
-  animation: move 0.1s infinite;
+    animation: move 0.1s infinite;
   }
   @keyframes move {
-  50% {margin-bottom: 80px;}
+    50% {
+      margin-bottom: 80px;
+    }
   }
 `;
 
@@ -86,76 +89,77 @@ const AnimatedText = styled.p`
 
 */
 
-
 export function GDPRPage(props) {
   return (
     <PageContainer>
       <AltNavBar />
       <TopText>GDPR</TopText>
-
       <MiddlePart>
-      <SmallText>
-      <div id="movingDiv">
-        <p>
-        <b>GDPR</b>, eller <i>General Data Protection Regulation</i> är EU:s nya dataskyddsförordning som har ändamålet att öka förtroendet som en kund eller anställd har på en organisation eller bransch. Denna förordning trädde i kraft den 25 maj 2018.
-        </p>
-      </div>
-      <b>Vi har lite kort sammanfattat vad som gäller kring dataskyddsförordningen och hur vi arbetar för att upprätta denna.</b>
-      </SmallText>
-      <Marginer direction="vertical" margin="2em" />
-      <SmallText>
-      För att underlätta vårt arbete för Er skull, för att vi ska kunna fullgöra våra avtal och personifiera våra kundmöten så sparar och hanterar vi information som kunden eller våra anställda väljer att dela med oss.
-      Denna informations hanteras på ett säkert sätt och delas inte med tredjeparter, Er integritet är av högsta prioritet i vårt arbete.
-      </SmallText>
+        <SectionContainer>
+          <SmallText>
+            <b>GDPR</b>, eller <i>General Data Protection Regulation</i> är EU:s
+            nya dataskyddsförordning som har ändamålet att öka förtroendet som
+            en kund eller anställd har på en organisation eller bransch. Denna
+            förordning trädde i kraft den 25 maj 2018.
+          </SmallText>
+          <SmallText>
+            <b>
+              Vi har lite kort sammanfattat vad som gäller kring
+              dataskyddsförordningen och hur vi arbetar för att upprätta denna.
+            </b>
+          </SmallText>
+        </SectionContainer>
+        <Marginer direction="vertical" margin="2em" />
+        <SectionContainer BgColor="#2c406240">
+          <SmallText>
+            För att underlätta vårt arbete för Er skull, för att vi ska kunna
+            fullgöra våra avtal och personifiera våra kundmöten så sparar och
+            hanterar vi information som kunden eller våra anställda väljer att
+            dela med oss. Denna informations hanteras på ett säkert sätt och
+            delas inte med tredjeparter, Er integritet är av högsta prioritet i
+            vårt arbete.
+          </SmallText>
+        </SectionContainer>
+        <SectionContainer NoBg>
+          <SmallText>
+            <ul>
+              <div align="center">
+                <b>Ni som kund eller anställd förbehåller er rätten att</b>
+              </div>
+              <li>begära utdrag av informationen vi har på Er.</li>
+              <li>veta hur vi behandlar er information.</li>
+              <li>be oss korrigera felaktiga uppgifter.</li>
+              <li>begära att vi raderar informationen vi lagrat om dig.</li>
+              <li>begära en begränsning av vår behandling av era uppgifter.</li>
+              <li>invända mot hur vi behandlar era uppgifter.</li>
+              <li>klaga.</li>
+            </ul>
+          </SmallText>
+        </SectionContainer>
+        <SectionContainer NoBg>
+          <SmallText>
+            <div align="center">
+              <Marginer direction="vertical" margin="2em" />
+              <b align="center">Informationen vi lagrar om Er</b>
+            </div>
 
-      <AnimatedText>
-      <div align="center" id="movingDiv">
-      <ul>
-        <b>Ni som kund eller anställd förbehåller er rätten att</b>
-        <li>begära utdrag av informationen vi har på Er.</li>
-        <li>veta hur vi behandlar er information.</li>
-        <li>be oss korrigera felaktiga uppgifter.</li>
-        <li>begära att vi raderar informationen vi lagrat om dig.</li>
-        <li>begära en begränsning av vår behandling av era uppgifter.</li>
-        <li>invända mot hur vi behandlar era uppgifter.</li>
-        <li>klaga.</li>
-      </ul>
-      <AnimatedText>
-        <div align="center">
-      <Marginer direction="vertical" margin= "2em" />
-      <b align="center">Informationen vi har lagrat om Er</b>
-      </div>
-      </AnimatedText>
-      </div>
-      </AnimatedText>
-
-      <AnimatedText>
-      <div align="center">
-      <ul>
-        <li>Kontaktuppgifter</li>
-        <li>Platsdata</li>
-        <li>Profildata</li>
-        <li>Beställningsinformation</li>
-        <li>Kommunikationsuppgifter</li>
-        <li>Betalningsinformation</li>
-        <li>Leveransinformation</li>
-      </ul>
-      </div>
-      </AnimatedText>
-    
+            <ul>
+              <li>Kontaktuppgifter</li>
+              <li>Platsdata</li>
+              <li>Profildata</li>
+              <li>Beställningsinformation</li>
+              <li>Kommunikationsuppgifter</li>
+              <li>Betalningsinformation</li>
+              <li>Leveransinformation</li>
+            </ul>
+          </SmallText>
+        </SectionContainer>
       </MiddlePart>
 
-    <div>
-    {/* 
-
-    <BottomPart>
-      <Marginer direction="vertical" margin= "15em" />
-      <Footer />
-    </BottomPart> 
-
-    */
-    }
-    </div>
+      <BottomPart>
+        <Marginer direction="vertical" margin="15em" />
+        <SmallFooter />
+      </BottomPart>
     </PageContainer>
   );
 }
