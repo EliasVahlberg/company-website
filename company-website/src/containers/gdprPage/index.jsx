@@ -28,7 +28,7 @@ const SectionContainer = styled.div`
 `;
 const BottomPart = styled.div`
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   flex-direction: column;
