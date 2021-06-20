@@ -4,15 +4,15 @@ import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
 import { Marginer } from "../../components/marginer";
-
-//Images import
-import GDPRIMG1 from "../../assets/textures/DataArrangingFlatline.svg";
-import GDPRIMG2 from "../../assets/textures/SecurityTwoColor.svg";
-import PageContainer from "../../components/pageContainer";
+import { PageContainer } from "../../components/pageContainer";
 import {
   BottomContainer,
   MiddleContainer,
 } from "../../components/pageSubContainers";
+
+//Images import
+//import GDPRIMG1 from "../../assets/textures/DataArrangingFlatline.svg";
+//import GDPRIMG2 from "../../assets/textures/SecurityTwoColor.svg";
 
 const SectionContainer = styled.div`
   width: 65%;
