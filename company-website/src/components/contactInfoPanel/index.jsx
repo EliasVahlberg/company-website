@@ -9,7 +9,7 @@ const ContactInfoWrapper = styled.div`
   justify-content: center;
   width: 35%;
   border-radius: 10px;
-  height: 100%;
+  //height: 100%;
 `;
 //${({ panelHeight }) =>
 //panelHeight ? `${panelHeight}px` : "80%"};
@@ -19,7 +19,7 @@ const ContactInfoWrapperInner = styled.div`
   align-items: center;
   padding: 40px;
   width: 100%;
-  height: 70%;
+  height: 100%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 20px 0px rgba(17, 15, 90, 0.2);

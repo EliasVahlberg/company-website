@@ -8,13 +8,12 @@ import { Marginer } from "../../components/marginer";
 //Images import
 import GDPRIMG1 from "../../assets/textures/DataArrangingFlatline.svg";
 import GDPRIMG2 from "../../assets/textures/SecurityTwoColor.svg";
+import PageContainer from "../../components/pageContainer";
+import {
+  BottomContainer,
+  MiddleContainer,
+} from "../../components/pageSubContainers";
 
-const PageContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-`;
 const SectionContainer = styled.div`
   width: 65%;
   display: flex;
@@ -25,22 +24,6 @@ const SectionContainer = styled.div`
   @media screen and (max-width: 720px) {
     width: 90%;
   }
-`;
-const BottomPart = styled.div`
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-`;
-
-const MiddlePart = styled.div`
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 
 const TopText = styled.h1`
@@ -77,24 +60,12 @@ const AnimatedText = styled.p`
   }
 `;
 
-/* 
-    <SmallText>
-      <div id="movingDiv">
-        <p>
-        <b>GDPR</b>, eller <i>General Data Protection Regulation</i> är EU:s nya dataskyddsförordning som har ändamålet att öka förtroendet som en kund eller anställd har på en organisation eller bransch. Denna förordning trädde i kraft den 25 maj 2018.
-        </p>
-      </div>
-      <p>Vi har lite kort sammanfattat vad som gäller kring dataskyddsförordningen och hur vi arbetar för att upprätta denna.</p>
-    </SmallText>
-
-*/
-
 export function GDPRPage(props) {
   return (
     <PageContainer>
       <AltNavBar />
       <TopText>GDPR</TopText>
-      <MiddlePart>
+      <MiddleContainer>
         <SectionContainer>
           <SmallText>
             <b>GDPR</b>, eller <i>General Data Protection Regulation</i> är EU:s
@@ -154,12 +125,12 @@ export function GDPRPage(props) {
             </ul>
           </SmallText>
         </SectionContainer>
-      </MiddlePart>
+      </MiddleContainer>
 
-      <BottomPart>
+      <BottomContainer>
         <Marginer direction="vertical" margin="15em" />
         <SmallFooter />
-      </BottomPart>
+      </BottomContainer>
     </PageContainer>
   );
 }
