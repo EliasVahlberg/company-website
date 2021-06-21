@@ -17,6 +17,10 @@ const OuterWrapper = styled.div`
   //padding: xy;
   //padding: top x bot;
   //padding: top x bot;
+  @media screen and (max-width: 900px) {
+    width: 95%;
+    flex-direction: column;
+  }
 `;
 
 const StyledFormWrapper = styled.div`
@@ -29,6 +33,9 @@ const StyledFormWrapper = styled.div`
   padding: 0 0 0 0;
   resize: none;
   flex-flow: column nowrap;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;
 const sharedStyles = css`
   background-color: #eee;
@@ -49,6 +56,9 @@ const StyledForm = styled.form`
   //height: 80%;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  @media screen and (max-width: 900px) {
+    padding: 40px;
+  }
 `;
 const StyledTextArea = styled.textarea`
   background-color: #eee;

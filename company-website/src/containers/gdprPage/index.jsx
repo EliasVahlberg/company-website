@@ -4,7 +4,7 @@ import { SmallFooter } from "../../components/footer";
 import { theme } from "../../theme";
 import { AltNavBar } from "../../components/navbar";
 import { Marginer } from "../../components/marginer";
-import { PageContainer } from "../../components/pageContainer";
+import { PageContainerWideBg } from "../../components/pageContainer";
 import {
   BottomContainer,
   MiddleContainer,
@@ -18,7 +18,7 @@ const SectionContainer = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
-
+  border-radius: 10px;
   background: ${(props) =>
     props.NoBg ? "rgba(0,0,0,0)" : props.BgColor || "rgba(49, 49, 49, 0.1)"};
   @media screen and (max-width: 720px) {
@@ -26,6 +26,22 @@ const SectionContainer = styled.div`
   }
 `;
 
+const BlurrFilterSectionContainer = styled.div`
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: ${(props) =>
+    props.NoBg
+      ? "rgba(231, 218, 218, 0.1)"
+      : props.BgColor || "rgba(49, 49, 49, 0.1)"};
+  @media screen and (max-width: 720px) {
+    width: 90%;
+  }
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 20px 0px rgba(17, 15, 90, 0.2);
+`;
 const TopText = styled.h1`
   font-size: 33px;
   font-weight: bold;
@@ -39,6 +55,7 @@ const TopText = styled.h1`
 const SmallText = styled.p`
   font-size: 17px;
   line-height: 1.4;
+  font-weight: bold;
   color: ${theme.kinda_dark};
   margin: 0;
 `;
@@ -62,27 +79,28 @@ const AnimatedText = styled.p`
 
 export function GDPRPage(props) {
   return (
-    <PageContainer>
+    <PageContainerWideBg>
       <AltNavBar />
       <TopText>GDPR</TopText>
       <MiddleContainer>
-        <SectionContainer>
-          <SmallText>
+        <BlurrFilterSectionContainer>
+          <SmallText style={{ fontSize: "20px" }}>
             <b>GDPR</b>, eller <i>General Data Protection Regulation</i> är EU:s
             nya dataskyddsförordning som har ändamålet att öka förtroendet som
             en kund eller anställd har på en organisation eller bransch. Denna
             förordning trädde i kraft den 25 maj 2018.
           </SmallText>
-          <SmallText>
+          <br></br>
+          <SmallText style={{ fontSize: "20px" }}>
             <b>
               Vi har lite kort sammanfattat vad som gäller kring
               dataskyddsförordningen och hur vi arbetar för att upprätta denna.
             </b>
           </SmallText>
-        </SectionContainer>
+        </BlurrFilterSectionContainer>
         <Marginer direction="vertical" margin="2em" />
-        <SectionContainer BgColor="#2c406240">
-          <SmallText>
+        <BlurrFilterSectionContainer BgColor="#676e7a40">
+          <SmallText style={{ fontSize: "20px" }}>
             För att underlätta vårt arbete för Er skull, för att vi ska kunna
             fullgöra våra avtal och personifiera våra kundmöten så sparar och
             hanterar vi information som kunden eller våra anställda väljer att
@@ -90,11 +108,12 @@ export function GDPRPage(props) {
             delas inte med tredjeparter, Er integritet är av högsta prioritet i
             vårt arbete.
           </SmallText>
-        </SectionContainer>
-        <SectionContainer NoBg>
+        </BlurrFilterSectionContainer>
+        <Marginer direction="vertical" margin="2em" />
+        <BlurrFilterSectionContainer NoBg>
           <SmallText>
             <ul>
-              <div align="center">
+              <div align="center" style={{ fontSize: "25px" }}>
                 <b>Ni som kund eller anställd förbehåller er rätten att</b>
               </div>
               <li>begära utdrag av informationen vi har på Er.</li>
@@ -106,12 +125,15 @@ export function GDPRPage(props) {
               <li>klaga.</li>
             </ul>
           </SmallText>
-        </SectionContainer>
-        <SectionContainer NoBg>
+        </BlurrFilterSectionContainer>
+        <Marginer direction="vertical" margin="2em" />
+        <BlurrFilterSectionContainer NoBg>
           <SmallText>
             <div align="center">
               <Marginer direction="vertical" margin="2em" />
-              <b align="center">Informationen vi lagrar om Er</b>
+              <b align="center" style={{ fontSize: "25px" }}>
+                Informationen vi lagrar om Er
+              </b>
             </div>
 
             <ul>
@@ -124,13 +146,13 @@ export function GDPRPage(props) {
               <li>Leveransinformation</li>
             </ul>
           </SmallText>
-        </SectionContainer>
+        </BlurrFilterSectionContainer>
       </MiddleContainer>
 
       <BottomContainer>
         <Marginer direction="vertical" margin="15em" />
         <SmallFooter />
       </BottomContainer>
-    </PageContainer>
+    </PageContainerWideBg>
   );
 }

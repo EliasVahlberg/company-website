@@ -7,9 +7,11 @@ import { theme } from "../../theme";
 const ContactInfoWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 35%;
+  width: ${(props) => (props.width ? props.width : "35%")};
   border-radius: 10px;
-  //height: 100%;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;
 //${({ panelHeight }) =>
 //panelHeight ? `${panelHeight}px` : "80%"};
@@ -39,9 +41,9 @@ const SmallText = styled.p`
 `;
 
 export default function ContactInfoPanel(props) {
-  const { panelHeight } = props;
+  const { panelHeight, width } = props;
   return (
-    <ContactInfoWrapper>
+    <ContactInfoWrapper width={width}>
       <ContactInfoWrapperInner height={panelHeight}>
         <TextArea>
           <BiggerText>Kontakt Information</BiggerText>

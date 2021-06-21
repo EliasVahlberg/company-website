@@ -128,7 +128,9 @@ export function Footer(props) {
       <TopFooterRadius />
       <FooterContainer>
         <Marginer direction="vertical" margin="4em" />
-        <Logo medium />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Logo medium />
+        </Link>
         <Marginer direction="vertical" margin="2em" />
         <BigFatText>
           Vi ser till att ni kan fokusera på det ni är bra på.
@@ -151,7 +153,12 @@ export function Footer(props) {
             </LeftContainer>
             <RightContainer>
               <SocialIcon>
-                <FontAwesomeIcon icon={faLinkedin} />
+                <a
+                  href="https://www.linkedin.com/company/dioptima"
+                  style={{ color: "#FFF" }}
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
               </SocialIcon>
             </RightContainer>
           </RLC>
@@ -169,7 +176,9 @@ export function SmallFooter(props) {
     <div>
       <SmallFooterContainer>
         <Marginer direction="vertical" margin="4em" />
-        <Logo medium />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Logo medium />
+        </Link>
         <Marginer direction="vertical" margin="1em" />
         <BottomBox>
           <HLine />
@@ -188,7 +197,12 @@ export function SmallFooter(props) {
             </LeftContainer>
             <RightContainer>
               <SocialIcon>
-                <FontAwesomeIcon icon={faLinkedin} />
+                <a
+                  href="https://www.linkedin.com/company/dioptima"
+                  style={{ color: "#FFF" }}
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
               </SocialIcon>
             </RightContainer>
           </RLC>
