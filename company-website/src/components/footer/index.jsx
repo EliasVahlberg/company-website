@@ -150,6 +150,16 @@ export function Footer(props) {
                   <LinkText>Kontakta oss</LinkText>
                 </Link>
               </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link to="/services" style={{ textDecoration: "none" }}>
+                  <LinkText>Tjänster</LinkText>
+                </Link>
+              </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link to="/info" style={{ textDecoration: "none" }}>
+                  <LinkText>Om oss</LinkText>
+                </Link>
+              </SmallBoldText>
             </LeftContainer>
             <RightContainer>
               <SocialIcon>
@@ -192,6 +202,16 @@ export function SmallFooter(props) {
               <SmallBoldText isReversed={false}>
                 <Link to="/contact" style={{ textDecoration: "none" }}>
                   <LinkText>Kontakta oss</LinkText>
+                </Link>
+              </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link to="/services" style={{ textDecoration: "none" }}>
+                  <LinkText>Tjänster</LinkText>
+                </Link>
+              </SmallBoldText>
+              <SmallBoldText isReversed={false}>
+                <Link to="/info" style={{ textDecoration: "none" }}>
+                  <LinkText>Om oss</LinkText>
                 </Link>
               </SmallBoldText>
             </LeftContainer>

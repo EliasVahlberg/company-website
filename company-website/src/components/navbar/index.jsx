@@ -53,7 +53,7 @@ export function NavBar() {
       <NavButtonFilledCont>
         <Link to="/services">
           <Button size={13} hPadd={5} vPadd={8}>
-            Börja här
+            Tjänster
           </Button>
         </Link>
         <Link to="/info">
