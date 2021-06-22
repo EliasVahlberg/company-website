@@ -76,7 +76,7 @@ const StyledInput = styled.input`
 
 const StyledButton = styled.button`
   display: block;
-  background-color: ${theme.primary_darker};
+  background-color: ${theme.logo_darkest};
   color: #fff;
   font-size: 0.9rem;
   border: 0;
@@ -169,11 +169,12 @@ export default function ContactFormStyled() {
       <StyledFormWrapper>
         <StyledForm onSubmit={handleSubmit} id="contact-form">
           <h2>Kontakta oss via mail</h2>
-          <label htmlFor="Företag">Företag</label>
+          <label htmlFor="company">Företag</label>
 
           <StyledInput
             type="text"
             name="company"
+            id="company"
             value={state.company}
             onChange={handleInput}
           />
@@ -182,6 +183,7 @@ export default function ContactFormStyled() {
           <StyledInput
             type="text"
             name="name"
+            id="name"
             value={state.name}
             onChange={handleInput}
           />
@@ -189,6 +191,7 @@ export default function ContactFormStyled() {
           <StyledInput
             type="email"
             name="email"
+            id="email"
             value={state.email}
             onChange={handleInput}
           />
@@ -197,6 +200,7 @@ export default function ContactFormStyled() {
           <StyledInput
             type="text"
             name="tel"
+            id="tel"
             value={state.tel}
             onChange={handleInput}
           />
@@ -205,12 +209,14 @@ export default function ContactFormStyled() {
           <StyledInput
             type="text"
             name="service"
+            id="service"
             value={state.service}
             onChange={handleInput}
           />
           <label htmlFor="note">Övrig information/frågor</label>
           <StyledTextArea
             name="note"
+            id="note"
             value={state.note}
             onChange={handleInput}
           />

@@ -4,4 +4,6 @@ export const theme = {
   logo_darker: "#1cc29f",
   logo_lighter: "#0f6653",
   kinda_dark: "#242424",
+  logo_darkest: "#238080",
 };
+//#2B8279

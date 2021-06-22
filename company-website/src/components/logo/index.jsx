@@ -41,7 +41,12 @@ export function Logo(props) {
   const { inline, medium } = props;
   return (
     <LogoContainer inline={inline}>
-      <LogoImg src={CompLogo} inline={inline} medium={medium} />
+      <LogoImg
+        src={CompLogo}
+        inline={inline}
+        medium={medium}
+        alt="Company logo"
+      />
       <LogoText inline={inline} medium={medium}>
         Dioptima
       </LogoText>

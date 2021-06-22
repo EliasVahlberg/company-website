@@ -42,7 +42,7 @@ const BigFatText = styled.h1`
   text-align: center;
 `;
 
-const SmallBoldText = styled.p`
+const SmallBoldText = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 11px;
@@ -165,6 +165,7 @@ export function Footer(props) {
               <SocialIcon>
                 <a
                   href="https://www.linkedin.com/company/dioptima"
+                  aria-label="LinkedIn"
                   style={{ color: "#FFF" }}
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
@@ -219,6 +220,7 @@ export function SmallFooter(props) {
               <SocialIcon>
                 <a
                   href="https://www.linkedin.com/company/dioptima"
+                  aria-label="LinkedIn"
                   style={{ color: "#FFF" }}
                 >
                   <FontAwesomeIcon icon={faLinkedin} />

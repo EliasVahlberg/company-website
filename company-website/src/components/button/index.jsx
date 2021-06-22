@@ -6,7 +6,7 @@ const ButtonWraper = styled.button`
   padding: ${({ hPadd, vPadd }) =>
     hPadd && vPadd ? hPadd + "px " + vPadd + "px" : "7px 15px"};
   border-radius: 3px;
-  background-color: ${theme.primary_darker};
+  background-color: ${theme.logo_darkest};
   color: #fff;
   font-weight: bold;
   font-size: ${({ size }) => (size ? size + "px" : "17px")};
@@ -16,7 +16,7 @@ const ButtonWraper = styled.button`
   text-decoration: none;
   &:hover {
     background: transparent;
-    border: 2px solid ${theme.primary_darker};
+    border: 2px solid ${theme.logo_darkest};
   }
   &:active {
     border: 2px solid ${theme.primary};

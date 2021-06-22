@@ -41,7 +41,7 @@ const SegmentTitle = styled.h2`
   }
 `;
 const InfoContent = styled.p`
-  color: #7a7a7a;
+  color: #6a6a6a;
   font-size: 20px;
   text-align: center;
   line-height: 23px;
@@ -58,7 +58,7 @@ export function InfoSegment(props) {
         <SegmentTitle>{title}</SegmentTitle>
         <InfoContent>{description}</InfoContent>
       </SegmentContainer>
-      <InfoImg src={imgURL} />
+      <InfoImg src={imgURL} alt="Ilustration of the prev content" />
     </InfoSegmentContainer>
   );
 }
