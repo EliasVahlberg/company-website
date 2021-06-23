@@ -49,7 +49,11 @@ export default function ContactInfoPanel(props) {
           <BiggerText>Kontakt Information</BiggerText>
           <SmallText>
             <FontAwesomeIcon icon={faPhoneAlt} />
-            &emsp;+4670 123 456 789
+            &emsp;+4670 719 90 87
+          </SmallText>
+          <SmallText>
+            <FontAwesomeIcon icon={faPhoneAlt} />
+            &emsp;+4679 346 96 49
           </SmallText>
           <SmallText>
             <FontAwesomeIcon icon={faEnvelope} />

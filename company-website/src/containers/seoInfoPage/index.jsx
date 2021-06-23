@@ -27,6 +27,7 @@ const TopText = styled.h1`
   text-align: center;
 `;
 export function SeoInfoPage(props) {
+  window.scrollTo(0, 0);
   return (
     <PageContainer>
       <AltNavBar />

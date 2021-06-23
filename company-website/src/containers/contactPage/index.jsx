@@ -61,6 +61,7 @@ const SmallText = styled.p`
 
 //<Marginer direction="vertical" margin="100em" />
 export function ContactPage(props) {
+  window.scrollTo(0, 0);
   return (
     <PageContainer>
       <AltNavBar />

@@ -46,6 +46,7 @@ const ArrowContainer = styled.div`
 `;
 
 export function TopSection(props) {
+  window.scrollTo(0, 0);
   const scrollToNextSec = () => {
     scroller.scrollTo("infoSection", { smooth: true, duration: 1500 });
   };

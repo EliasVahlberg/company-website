@@ -13,6 +13,7 @@ const PageContainer = styled.div`
 `;
 
 export function HomePage(props) {
+  window.scrollTo(0, 0);
   return (
     <PageContainer>
       <TopSection />

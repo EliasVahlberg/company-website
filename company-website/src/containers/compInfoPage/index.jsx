@@ -20,7 +20,7 @@ const TopText = styled.h1`
   text-align: center;
 `;
 const aboutUsText =
-  "Vi är ett mindre företag startat av två studenter med en bred erfarenhet innom digitalisering, sökoptimering (SEO), web och applikationsutveckling. Vi hjälper ditt företag att att synas och nu ut till potentiella kunder. Vi erbjuder både traditionell och lokal sökoptimering. Efteråt uppföljer vi och ser till att alla våra kunder är nöjda med det arbete vi genomfört. Vi erbjuder inget vi inte kan leverera på men vi kan ge rimliga uppskattning på vad ni kan förvänta för resultat. Vi jobbar mer fasta priser på alla våra tjänster så att ni att ni kan avgöra om vi är rätt för er. Vi är fullständigt transparenta i allt arbete vi genomför, dokumentation finns alltid tillgängligt till dig som kund.";
+  "Vi är ett mindre företag startat av två studenter med en bred erfarenhet innom digitalisering, sökoptimering (SEO), web och applikationsutveckling. Vi hjälper ditt företag att synas och nå ut till potentiella kunder. Vi erbjuder både traditionell och lokal sökoptimering. Efteråt uppföljer vi och ser till att alla våra kunder är nöjda med det arbete vi genomfört. Vi erbjuder inget vi inte kan leverera på, men vi kan ge rimlig uppskattning på vad ni kan förvänta för resultat. Vi jobbar med fasta priser på alla våra tjänster så att ni att ni kan avgöra om vi är rätt för er. Vi är fullständigt transparenta i allt arbete vi genomför, dokumentation finns alltid tillgängligt till dig som kund.";
 //<Marginer direction="vertical" margin="100em" />
 
 const S3 = styled.div`
@@ -66,6 +66,7 @@ const PNormalResponsive = styled(PNormal)`
   }
 `;
 export function CompInfoPage(props) {
+  window.scrollTo(0, 0);
   return (
     <PageContainerWideBg>
       <AltNavBar />

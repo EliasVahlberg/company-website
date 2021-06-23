@@ -10,7 +10,10 @@ import {
   MiddleContainer,
 } from "../../components/pageSubContainers";
 import ServiceCard from "../../components/serviceCard";
-const BlurrFilterContainer = styled.div`
+
+//Testas senare: import * as constants from "../../temp/testglobal.js";
+
+export const BlurrFilterContainer = styled.div`
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 20px 0px rgba(17, 15, 90, 0.2);
@@ -27,6 +30,7 @@ const BlurrFilterContainer = styled.div`
     padding: 5px;
   }
 `;
+
 const card1Desc = (
   <>
     <b>Om tjänsten:</b> Inledningsvis gör en vi bedömning på eran lokala
@@ -103,6 +107,7 @@ const card3Desc = (
   </>
 );
 export function ServicesPage(props) {
+  window.scrollTo(0, 0);
   return (
     <PageContainerWideBg>
       <AltNavBar />

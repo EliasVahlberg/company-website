@@ -78,6 +78,7 @@ const AnimatedText = styled.p`
 `;
 
 export function GDPRPage(props) {
+  window.scrollTo(0, 0);
   return (
     <PageContainerWideBg>
       <AltNavBar />

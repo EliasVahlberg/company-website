@@ -19,6 +19,7 @@ const InfoContainer = styled(Element)`
   padding: 10em, 0;
 `;
 export function SeoInfoSection() {
+  window.scrollTo(0, 0);
   return (
     <InfoContainer name="infoSection">
       <SectionTitle>INFO</SectionTitle>
