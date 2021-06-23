@@ -1,2 +1,3 @@
-# company-website
-Website for my company
+# Company Website
+
+We hope this is private
